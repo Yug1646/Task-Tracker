@@ -1,0 +1,22 @@
+info:
+  name: Update Task
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: http://localhost:3000/api/task/1
+  body:
+    type: json
+    data: |-
+      {
+        "description": "Remove the Express server",
+        "status": "in-progress"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

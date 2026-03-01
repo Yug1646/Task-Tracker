@@ -1,0 +1,22 @@
+info:
+  name: Task by Status
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: http://localhost:3000/api/task?filter=status&value=todo
+  params:
+    - name: filter
+      value: status
+      type: query
+    - name: value
+      value: todo
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

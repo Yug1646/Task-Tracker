@@ -1,0 +1,21 @@
+info:
+  name: Update Task Detail
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: http://localhost:3000/api/task/1
+  body:
+    type: json
+    data: |-
+      {
+        "description": "Remove the Express server"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

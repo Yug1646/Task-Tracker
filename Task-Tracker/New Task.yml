@@ -1,0 +1,22 @@
+info:
+  name: New Task
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://localhost:3000/api/task
+  body:
+    type: json
+    data: |-
+      {
+        "description": "Set up the Express server",
+        "status": "done"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
